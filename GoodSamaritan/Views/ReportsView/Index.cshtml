@@ -7,3 +7,43 @@
 
 @* -- ANGULAR STUFF STARTS / GOES HERE -- *@
 
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body ng-app="myApp" ng-controller="MainController">
+
+    <div ng-hide="bearer">  Bearer Token: {{bearer}}</div>
+    <br /><br />
+ 
+    
+    <p>API Report Content: <br /> {{content}}</p>
+        <p>id : {{content[8]}}</p>
+        <p><b>Status </b><br /></p>
+        <p>open: {{content[29]}} <br /></p>
+        <p>Closed: {{content[42]}} <br /></p>
+        <p>Reopened: {{content[57]}} <br /></p>
+        <p><b>Program </b><br /></p>
+        <p>Crisis: {{content[82]}} <br /></p>
+        <p>Court: {{content[94]}} <br /></p>
+        <p>Smart: {{content[106]}} <br /></p>
+        <p>dvu: {{content[116]}} <br /></p>
+        <p>mcfd: {{content[127]}} <br /></p>
+        <p><b>Gender </b><br /></p>
+        <p>female: {{content[151]}} <br /></p>
+        <p>male: {{content[162]}} <br /></p>
+        <p>trans: {{content[174]}} <br /></p>
+         <p><b>Gender </b><br /></p>
+         <p>adult: {{content[194]}} <br /></p>
+    <p>youth 18-25: {{content[210]}} <br /></p>
+    <p>youth12-19: {{content[226]}} <br /></p>
+    <p>child: {{content[238]}} <br /></p>
+    <p>senior: {{content[251]}} <br /></p>
+        
+
+</body>
+</html>
+<script src="~/Scripts/jquery-2.1.3.js"></script>
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/mainController.js"></script>

@@ -1,6 +1,6 @@
 ﻿(function () {
 
-    var app = angular.module("myApp", []);
+    var app = angular.module("myApp");
 
     // -- APP CONFIG -- CONVERTS JSON TO FORMDATA -- 
     app.config(['$httpProvider', function ($httpProvider) {

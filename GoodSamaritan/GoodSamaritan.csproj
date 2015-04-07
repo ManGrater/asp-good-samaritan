@@ -1131,6 +1131,7 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\scripts.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Scripts\mainController.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1363,6 +1364,7 @@
     <Content Include="Views\ReportsView\Index.cshtml" />
     <Content Include="Views\MVCReportsView\Index.cshtml" />
     <Content Include="Views\MVCReportsView\Report.cshtml" />
+    <Content Include="Views\ReportsView\Index-old.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\NewFolder1\" />
