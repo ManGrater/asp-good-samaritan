@@ -326,6 +326,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Icon.png" />
     <Content Include="readme.txt" />
+    <Content Include="Reports.html" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />

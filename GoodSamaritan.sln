@@ -5,28 +5,6 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodSamaritan", "GoodSamaritan\GoodSamaritan.csproj", "{1454CF7D-6E9C-4932-A7B6-0385ADC6BF84}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AngularReports", "http://localhost:2373", "{D961F58C-6F12-413A-8F35-50557037AE51}"
-	ProjectSection(WebsiteProperties) = preProject
-		UseIISExpress = "true"
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_2373"
-		Debug.AspNetCompiler.PhysicalPath = "AngularReports\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_2373\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_2373"
-		Release.AspNetCompiler.PhysicalPath = "AngularReports\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_2373\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "AngularReports\"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,10 +15,6 @@ Global
 		{1454CF7D-6E9C-4932-A7B6-0385ADC6BF84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1454CF7D-6E9C-4932-A7B6-0385ADC6BF84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1454CF7D-6E9C-4932-A7B6-0385ADC6BF84}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D961F58C-6F12-413A-8F35-50557037AE51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D961F58C-6F12-413A-8F35-50557037AE51}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D961F58C-6F12-413A-8F35-50557037AE51}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{D961F58C-6F12-413A-8F35-50557037AE51}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

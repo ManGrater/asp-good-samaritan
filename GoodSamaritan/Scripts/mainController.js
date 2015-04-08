@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
 
     var app = angular.module("myApp", []);
 
@@ -50,86 +50,80 @@
         function ($q, $rootScope) {
         }]);
 
-    //-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
 
     // -- MAINCONTROLLER --
     var MainController = function ($scope, $http) {
 
         console.log("Initializing Main Controller");
-
+        $scope.loginForm = true;
+        $scope.reportForm = false;
+        $scope.reportResult = false;
         //global var
         var bearerToken = "";
 
-        //username and password config. also need grant_type
-        var config = {};
-        config.username = "adam@gs.ca";
-        config.password = "P@$$w0rd";
-        config.grant_type = "password";
 
-        //get token request data
-        var tokenRequest = {
-            method: 'POST',
-            url: 'http://localhost:11238/Token',
-            data: config,
-        }
-
-        //save the bearer token
-        var setToken = function (response) {
-            console.log("inside success response");
-            alert(JSON.stringify(response));
-            $scope.bearer = response.access_token;
-            bearerToken = response.access_token;
-
-            //since all steps are automated,now make the API call for the filter
-            callAPI();
-        }
-
-        //make the API call for the Token
-        console.log("about to call");
-        $http(tokenRequest).success(setToken);
-
-
-        // ------- API REQUEST -----------
-
-        function callAPI() {
-
-            var report = function (response) {
-                console.log("inside success response 2");
-                alert(JSON.stringify(response));
-
-                $scope.content = JSON.stringify(response);
-            }
-
-
-
-            var filterData = {};
-            filterData.year = "1";
-            filterData.month = "4";
-
-            var reportGenRequest = {
+        $scope.login = function () {
+            var config = {};
+            config.username = $scope.username;
+            config.password = $scope.password;
+            config.grant_type = "password";
+            
+            var tokenRequest = {
                 method: 'POST',
-                url: 'http://localhost:11238/api/Reports',
+                url: 'http://a3.thunderchicken.ca/Token',
+                data: config,
+            }
+          /*  var onFailure = function (response) {
+                console.log("inside failure response");
+               
+            }*/
+
+            var saveToken = function(response)
+            {
+                $scope.loginForm = false;
+                $scope.reportForm = true;
+                $scope.reportResult = false;
+                bearerToken = response.access_token;
+                console.log("our new test" + bearerToken);
+            }            
+           
+            $http(tokenRequest).success(saveToken);
+        }
+
+        $scope.genReport=function()
+        {
+            console.log("test year & month " + $scope.year + "   " + $scope.month)
+            var filterData = {};
+            filterData.year = $scope.year;
+            filterData.month = $scope.month;
+
+            var repGenRequest = {
+                method: 'POST',
+                url: 'http://a3.thunderchicken.ca/api/Reports',
                 headers: {
                     "Authorization": "Bearer " + bearerToken
                 },
                 data: filterData,
             }
 
-            $http(reportGenRequest).success(report);
+            var returnreport = function(response)
+            {
+                $scope.loginForm = false;
+                $scope.reportForm = true;
+                $scope.reportResult = true;
+               // alert("in response area")
+                $scope.content = response;
+            }
+
+            $http(repGenRequest).success(returnreport);
+             
+
         }
 
-
-
-
-
-        var onFailure = function (response) {
-            console.log("inside failure response");
-            alert(JSON.stringify(response));
-        }
-
-
+       
     }
-
+    
     app.controller("MainController", ["$scope", "$http", MainController]);
 
 

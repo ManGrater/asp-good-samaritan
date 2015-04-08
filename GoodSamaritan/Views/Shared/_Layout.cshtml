@@ -46,7 +46,7 @@
                         @{ if (User.IsInRole("Administrator") || User.IsInRole("Worker") || User.IsInRole("Reporter"))
                          {
                             <li>
-                                @Html.ActionLink("Generate Report", "Index", "ReportsView")
+                                @Html.ActionLink("Generate Report", "Index", "MVCReportsView")
                             </li>
                          }}
                         @{ if (User.IsInRole("Administrator"))
